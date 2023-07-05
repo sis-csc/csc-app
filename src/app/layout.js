@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={cabin.className}>
-      <body className="w-full overflow-auto">
+      <body className="flex flex-col max-w-screen-[1440px] w-full overflow-auto">
         {/* z-index: 컴포넌트들이 겹칠때 어떤 것이 앞으로 가는지, 숫자가 클수록 앞으로 */}
         {/* max-w-screen-? mx-auto: Responsive Design을 위해서 앱의 컨텐츠 양쪽에 공백주기 */}
         <header className="top-0 z-10 bg-yellow-50">
@@ -24,11 +24,9 @@ export default function RootLayout({ children }) {
             <NavBar />
           </div>
         </header>
-        <main className="w-full flex justify-center max-w-screen-xl mx-auto">
-          {children}
-        </main>
-        <footer className="bottom-0 fixed w-full bg-purple-50">
-          <div className="max-w-screen-2xl mx-auto">
+        <main className="w-full max-w-screen-lg mx-auto grow">{children}</main>
+        <footer className="w-full bottom-0 bg-purple-200">
+          <div className="mx-auto">
             <Footer />
           </div>
         </footer>
