@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import "./globals.css";
 import { Cabin } from "next/font/google";
 import Footer from "@/components/Footer";
+import SWRConfigContext from "@/context/SWRConfigContext";
 
 // global font 설정: next/font 활용하기, Google Variable Fonts
 const cabin = Cabin({ subsets: ["latin"] });
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
             <NavBar />
           </div>
         </header>
-        <main className="w-full max-w-screen-lg mx-auto grow">{children}</main>
+        <main className="w-full max-w-screen-lg mx-auto grow">
+          <SWRConfigContext>{children}</SWRConfigContext>
+        </main>
         <footer className="w-full bottom-0 bg-purple-200">
           <div className="mx-auto">
             <Footer />
