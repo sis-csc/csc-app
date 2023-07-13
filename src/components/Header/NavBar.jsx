@@ -15,10 +15,6 @@ const menu = [
     href: "/about",
   },
   {
-    name: "Events",
-    href: "/events",
-  },
-  {
     name: "Schedule",
     href: "/schedule",
   },
@@ -41,17 +37,34 @@ export default function NavBar() {
           {menu.map((item, index) => (
             <li key={item.href}>
               <Link href={item.href}>
-                <h1
+                <button
                   className="text-lg lg:text-xl 
                 text-black hover:text-slate-500"
                 >
                   {item.name}
-                </h1>
+                </button>
               </Link>
             </li>
           ))}
+          <div>
+            <button class="peer hover:text-slate-500 text-lg lg:text-xl">Events</button>
+            <div className="hidden peer-hover:flex hover:flex
+            w-[200px]
+            flex-col bg-white drop-shadow-lg">
+                <Link class="px-5 hover:bg-gray-200" href="/events/inschool">
+                <h1>In-School</h1>
+                </Link>
+                <Link class="px-5 hover:bg-gray-200" href="/events/annashouse">
+                <h1>Anna's House</h1>
+                </Link>
+                <Link class="px-5 hover:bg-gray-200" href="/events/fundraising">
+                <h1>Fundraising</h1>
+                </Link>
+            </div>
+        </div>
         </ul>
       </nav>
+
     </div>
   );
 }
