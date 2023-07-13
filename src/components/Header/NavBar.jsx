@@ -15,12 +15,31 @@ const menu = [
     href: "/about",
   },
   {
+    name: "Events",
+    href: "/events",
+  },
+  {
     name: "Schedule",
     href: "/schedule",
   },
   {
     name: "Members",
     href: "/members",
+  },
+];
+
+const subEvents = [
+  {
+    name: `Anna's House`,
+    href: "/events/annashouse",
+  },
+  {
+    name: "In-School Activities",
+    href: "/events/inschool",
+  },
+  {
+    name: "Fundraising",
+    href: "/events/fundraising",
   },
 ];
 
@@ -36,35 +55,47 @@ export default function NavBar() {
         <ul className="flex items-center gap-9 p-4">
           {menu.map((item, index) => (
             <li key={item.href}>
-              <Link href={item.href}>
-                <button
-                  className="text-lg lg:text-xl 
+              {item.name === "Events" ? (
+                <div className="flex flex-col top-0">
+                  <button
+                    className="peer text-lg lg:text-xl 
+                text-black"
+                  >
+                    Events
+                  </button>
+
+                  <ul
+                    className="fixed mt-8 hidden peer-hover:flex hover:flex
+               flex-col bg-white drop-shadow-lg p-2"
+                  >
+                    {subEvents.map((item, index) => (
+                      <li key={index}>
+                        <Link href={item.href}>
+                          <p
+                            className="text-md lg:text-lg 
                 text-black hover:text-slate-500"
-                >
-                  {item.name}
-                </button>
-              </Link>
+                          >
+                            {item.name}
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <Link href={item.href}>
+                  <button
+                    className="text-lg lg:text-xl 
+                  text-black hover:text-slate-500"
+                  >
+                    {item.name}
+                  </button>
+                </Link>
+              )}
             </li>
           ))}
-          <div>
-            <button class="peer hover:text-slate-500 text-lg lg:text-xl">Events</button>
-            <div className="hidden peer-hover:flex hover:flex
-            w-[200px]
-            flex-col bg-white drop-shadow-lg">
-                <Link class="px-5 hover:bg-gray-200" href="/events/inschool">
-                <h1>In-School</h1>
-                </Link>
-                <Link class="px-5 hover:bg-gray-200" href="/events/annashouse">
-                <h1>Anna's House</h1>
-                </Link>
-                <Link class="px-5 hover:bg-gray-200" href="/events/fundraising">
-                <h1>Fundraising</h1>
-                </Link>
-            </div>
-        </div>
         </ul>
       </nav>
-
     </div>
   );
 }
