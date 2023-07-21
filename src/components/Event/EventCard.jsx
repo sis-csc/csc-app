@@ -10,8 +10,6 @@ export default function EventCard({ eventName }) {
 
   if (isLoading) return <p>Loading...</p>;
 
-  const { image, description } = event[0];
-
   return (
     <div className="flex items-center bg-slate-400 p-2">
       <Image src={event[0].image} width={300} height={300} alt="Event Photo" />
