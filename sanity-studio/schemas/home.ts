@@ -12,6 +12,12 @@ export default {
                     type: "image",
                 }
             ]
+            
+        },
+        {
+            title: "Register Link",
+            name: "registerLink",
+            type: "url"
         }
     ]
 }

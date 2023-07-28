@@ -1,16 +1,21 @@
 "use client";
-
-import React from 'react'
+import useSWR from "swr";
 
 export default function JoinButton() {
+  // swr
+  const { data: link , isLoading, error } = useSWR("/api/home/register-link");
 
-  const ToJoinForm = () => {
-    window.open("https://www.google.com");
-  };
+  if (isLoading) return <p>Loading...</p>;
 
-    return (
-        <button onClick={ToJoinForm} className='flex justify-center p-4'>
-            Click Here and Join Our Club!!
-        </button>
-    );
+  const toRegisterLink = () => {
+    window.open(link, "_blank");
+  }
+
+  return ( 
+    link===undefined ? <></> : 
+    <button onClick={toRegisterLink}>
+      Click here to join our club!
+    </button>
+  );
+
 }
