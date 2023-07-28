@@ -1,7 +1,9 @@
 // www.blog.com = www.blog.com/
 // www.blog.com/about
 
+import ClubDescription from "@/components/Home/ClubDescription";
 import HomeCarousel from "@/components/Home/HomeCarousel";
+import JoinButton from "@/components/Home/JoinButton";
 
 // Home Page
 // 1. Club Description
@@ -19,12 +21,12 @@ export default function Home() {
       </div>
 
       <div className="mt-24 pt-96 w-full flex justify-center">
-        <h1>Club Description</h1>
+        <ClubDescription />
         {/* club description component => styling */}
       </div>
 
       <div className="w-full flex justify-center">
-        <h1>Join Button</h1>
+        <JoinButton />
         {/* Link Button => styling  */}
       </div>
 
