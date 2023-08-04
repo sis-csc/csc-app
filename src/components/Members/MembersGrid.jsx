@@ -1,12 +1,18 @@
 "use client";
 import useSWR from "swr";
 import MembersGridItem from "./MembersGridItem";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
 export default function MembersGrid() {
   // swr
   const { data: members, isLoading, error } = useSWR("/api/members");
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading)
+    return (
+      <div>
+        <LoadingSpinner />
+      </div>
+    );
 
   return (
     <div className="w-full py-10">

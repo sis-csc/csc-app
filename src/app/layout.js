@@ -2,9 +2,9 @@
 
 import "./globals.css";
 import { Cabin } from "next/font/google";
-import Footer from "@/components/Footer/Footer";
-import SWRConfigContext from "@/context/SWRConfigContext";
-import Header from "@/components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import SWRConfigContext from "../context/SWRConfigContext";
+import Header from "../components/Header/Header";
 
 // global font 설정: next/font 활용하기, Google Variable Fonts
 const cabin = Cabin({ subsets: ["latin"] });

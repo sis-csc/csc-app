@@ -1,6 +1,6 @@
-import EventCard from "@/components/Event/EventCard";
-import LinkButton from "@/components/Event/LinkButton";
-import PageTitle from "@/components/shared/PageTitle";
+import EventCard from "../../../components/Event/EventCard";
+import LinkButton from "../../../components/Event/LinkButton";
+import PageTitle from "../../../components/shared/PageTitle";
 import React from "react";
 
 export default function Inschool() {

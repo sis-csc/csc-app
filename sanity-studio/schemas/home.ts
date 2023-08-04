@@ -18,6 +18,16 @@ export default {
             title: "Register Link",
             name: "registerLink",
             type: "url"
+        },
+        {
+            title: "Club Description",
+            name: "clubDescription",
+            type: "text"
+        },
+        {
+            title: "Achievements",
+            name: "achievements",
+            type: "text"
         }
     ]
 }

@@ -1,7 +1,7 @@
-import PageTitle from "@/components/shared/PageTitle";
+import PageTitle from "../../../components/shared/PageTitle";
 import React from "react";
-import LinkButton from "@/components/Event/LinkButton";
-import EventCard from "@/components/Event/EventCard";
+import LinkButton from "../../../components/Event/LinkButton";
+import EventCard from "../../../components/Event/EventCard";
 
 export default function Fundraising() {
   return (

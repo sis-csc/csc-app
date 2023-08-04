@@ -1,6 +1,6 @@
 import React from "react";
-import PageTitle from "@/components/shared/PageTitle";
-import EventCalendar from "@/components/Schedule/EventCalendar";
+import PageTitle from "../../components/shared/PageTitle";
+import EventCalendar from "../../components/Schedule/EventCalendar";
 
 export default function SchedulePage() {
   return (
