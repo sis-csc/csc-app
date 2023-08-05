@@ -1,0 +1,30 @@
+[
+  {
+    "month": "July",
+    "year": "2023",
+    "id": "ed3b9535-4fb3-42c8-83c6-a5b7d242ef0a",
+    "events": [
+      {
+        "eventName": "Anna's House",
+        "eventType": "Anna's House",
+        "_key": "e60c95e863fa",
+        "eventDateTime": "2023-07-23T08:30:00.000Z",
+        "_type": "event"
+      },
+      {
+        "eventName": "Meeting",
+        "eventType": "Meeting",
+        "_key": "f0bbfedd02f6",
+        "eventDateTime": "2023-07-25T08:30:00.000Z",
+        "_type": "event"
+      },
+      {
+        "eventDateTime": "2023-07-29T08:30:00.000Z",
+        "_type": "event",
+        "eventName": "Send off",
+        "eventType": "Seniors send-off",
+        "_key": "f5e18bdc4650"
+      }
+    ]
+  }
+]

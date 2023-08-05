@@ -2,15 +2,18 @@
 
 import "./globals.css";
 import { Cabin } from "next/font/google";
-import Footer from "@/components/Footer/Footer";
-import SWRConfigContext from "@/context/SWRConfigContext";
-import Header from "@/components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import SWRConfigContext from "../context/SWRConfigContext";
+import Header from "../components/Header/Header";
 
 // global font 설정: next/font 활용하기, Google Variable Fonts
 const cabin = Cabin({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SIS Community Service Club",
+  title: {
+    default: "SIS Community Service Club",
+    template: "SIS Community Service Club | %s", // maybe shorten to SIS CSC?
+  },
   description: "Official Website of SIS Community Service Club",
 };
 

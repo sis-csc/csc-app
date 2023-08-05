@@ -1,9 +1,10 @@
 // www.blog.com = www.blog.com/
 // www.blog.com/about
 
-import ClubDescription from "@/components/Home/ClubDescription";
-import HomeCarousel from "@/components/Home/HomeCarousel";
-import JoinButton from "@/components/Home/JoinButton";
+import ClubDescription from "../components/Home/ClubDescription";
+import HomeCarousel from "../components/Home/HomeCarousel";
+import JoinButton from "../components/Home/JoinButton";
+import Achievements from "../components/Home/Achievements"
 
 // Home Page
 // 1. Club Description
@@ -25,13 +26,13 @@ export default function Home() {
         {/* club description component => styling */}
       </div>
 
-      <div className="w-full flex justify-center">
-        <JoinButton />
-        {/* Link Button => styling  */}
+      <div className="mt-10 w-full flex justify-centerw-full bg-green-100">
+        <Achievements />
       </div>
 
-      <div className="w-full bg-green-100">
-        <h1>Achievements</h1>
+      <div className="mt-5 mb-5 w-full flex justify-center">
+        <JoinButton />
+        {/* Link Button => styling  */}
       </div>
     </section>
   );

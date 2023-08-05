@@ -1,6 +1,6 @@
-import MembersGrid from "@/components/Members/MembersGrid";
+import MembersGrid from "../../components/Members/MembersGrid";
 import React from "react";
-import PageTitle from "@/components/shared/PageTitle";
+import PageTitle from "../../components/shared/PageTitle";
 
 export default function MembersPage() {
   return (

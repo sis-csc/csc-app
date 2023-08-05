@@ -1,6 +1,11 @@
 import React from "react";
-import PageTitle from "@/components/shared/PageTitle";
-import EventCalendar from "@/components/Schedule/EventCalendar";
+import PageTitle from "../../components/shared/PageTitle";
+import EventCalendar from "../../components/Schedule/EventCalendar";
+
+export const metadata = {
+  title: "Schedule",
+  description: "",
+};
 
 export default function SchedulePage() {
   return (
@@ -12,3 +17,5 @@ export default function SchedulePage() {
     </section>
   );
 }
+
+// Achievements, Link Button Sanity, Metatdata 설정, custom domain

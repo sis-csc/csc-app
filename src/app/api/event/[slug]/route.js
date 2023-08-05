@@ -1,4 +1,4 @@
-import { getAnnaHouse, getInSchool, getFundraising } from "@/services/event";
+import { getAnnaHouse, getInSchool, getFundraising } from "../../../../services/event";
 import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
