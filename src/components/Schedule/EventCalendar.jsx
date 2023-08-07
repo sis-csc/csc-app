@@ -43,12 +43,10 @@ export default function EventCalendar() {
   }
 
   function renderEventContent(eventInfo) {
-    console.log(eventInfo);
-    console.log(eventInfo.backgroundColor);
-
-    // backgroundColor 안보임
+    // backgroundColor 할 순 있는데 잘 안됨
+    // FullCalendar가 renderEventcontent를 잘 인식하지 않는걸로 보임
     return (
-      <div className={`flex bg-[${eventInfo.backgroundColor}] z-50`}>
+      <div className={`flex z-50`}>
         <p>{eventInfo.event.title}</p>
         <p>{eventInfo.timeText}</p>
       </div>
@@ -61,7 +59,6 @@ export default function EventCalendar() {
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
         dayMaxEvents={true}
-        eventContent={renderEventContent}
         events={newNewArray}
         editable={true}
       />
