@@ -4,11 +4,17 @@ import useSWR from "swr";
 import React from "react";
 import Carousel from "./Carousel";
 import CarouselItem from "./CarouselItem";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
 export default function HomeCarousel() {
   const { data: images, isLoading, error } = useSWR("/api/home/carousel");
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <div>
+        <LoadingSpinner />
+      </div>
+    );
 
   return (
     <div className="absolute flex w-screen justify-center">

@@ -4,11 +4,17 @@ import Image from "next/image";
 // desc
 import React from "react";
 import useSWR from "swr";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
 export default function EventCard({ eventName }) {
   const { data: event, isLoading, error } = useSWR(`/api/event/${eventName}`);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading)
+    return (
+      <div>
+        <LoadingSpinner />
+      </div>
+    );
 
   return (
     <div className="flex items-center bg-black">

@@ -1,7 +1,7 @@
-import EventCard from "@/components/Event/EventCard";
-import GoogleDocPreview from "@/components/Event/GoogleDocPreview";
-import LinkButton from "@/components/Event/LinkButton";
-import PageTitle from "@/components/shared/PageTitle";
+import EventCard from "../../../components/Event/EventCard";
+import GoogleDocPreview from "../../../components/Event/GoogleDocPreview";
+import LinkButton from "../../../components/Event/LinkButton";
+import PageTitle from "../../../components/shared/PageTitle";
 import React from "react";
 
 // EventCard
