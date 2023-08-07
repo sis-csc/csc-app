@@ -1,19 +1,6 @@
-"use client";
-import useSWR from "swr";
 import MembersGridItem from "./MembersGridItem";
-import LoadingSpinner from "../shared/LoadingSpinner";
 
-export default function MembersGrid() {
-  // swr
-  const { data: members, isLoading, error } = useSWR("/api/members");
-
-  if (isLoading)
-    return (
-      <div>
-        <LoadingSpinner />
-      </div>
-    );
-
+export default function MembersGrid({ members }) {
   return (
     <div className="w-full pt-5 pb-10 max-w-[250px] sm:max-w-full">
       <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
