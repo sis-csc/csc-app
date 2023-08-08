@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             <Header />
           </div>
         </header>
-        <main className="mt-10 md:mt-0 w-full max-w-screen-lg mx-auto grow">
+        <main className="mt-14 md:mt-0 w-full max-w-screen-lg mx-auto grow">
           <SWRConfigContext>{children}</SWRConfigContext>
         </main>
         <footer className="w-full bottom-0">

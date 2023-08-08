@@ -17,7 +17,7 @@ export default function EventCard({ eventName }) {
     );
 
   return (
-    <div className="flex w-full items-center bg-black">
+    <div className="flex w-full items-center bg-black pb-2">
       <div className="flex max-w-[50%]">
         <Image
           src={event[0].image}

@@ -10,7 +10,7 @@ export default function MembersGridItem({ photo, name, role, email }) {
     border border-gray-200 rounded-xl shadow-lg
     "
     >
-      <div className="flex flex-col px-4 py-2 z-30 ">
+      <div className="flex flex-col px-4 py-2 z-10 ">
         <div className="flex flex-col w-full items-end">
           <p className="text-[18px] md:text-[21px] lg:text-[26px] font-bold">
             {name}

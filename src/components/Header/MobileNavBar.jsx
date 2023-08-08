@@ -21,14 +21,14 @@ export default function MobileNavBar() {
       className="w-full flex items-center justify-center 
     mx-auto py-3 px-3 bg-gray-100"
     >
-      <div className="absolute left-0 pl-4 z-50">
+      <div className="absolute left-0 pl-4 z-40">
         <MobileMenuButton showMenu={showMenu} onClick={handleOnClick} />
       </div>
 
       <ClubLogoText size="small" />
 
       {showMenu && (
-        <div className="absolute top-0 w-full h-[350px] z-20">
+        <div className="absolute top-0 w-full h-[350px] z-30">
           <MobileMenu showMenu={showMenu} onClick={handleOnClick} />
         </div>
       )}
