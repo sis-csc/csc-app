@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { urlFor } from "../../services/sanity";
 
-export default function AchievementsItem({ title, image, description }) {
+export default function AchievementsItem({ title, photo, description }) {
   // styling 필요
   // image undefined error 수정 필요
   return (
@@ -11,7 +11,7 @@ export default function AchievementsItem({ title, image, description }) {
       <div className="flex">
         <Image
           className="object-cover"
-          src={urlFor(image)}
+          src={photo}
           width={800}
           height={800}
           alt={`${title} image`}

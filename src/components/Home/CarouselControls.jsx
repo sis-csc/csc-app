@@ -20,9 +20,12 @@ export default function CarouselControls({
         disabled={!canScrollPrev}
         className={classNames({
           "px-4 py-2 text-white rounded-md": true,
-          "bg-indigo-200": !canScrollPrev,
-          "bg-indigo-400": canScrollPrev,
+          "bg-orange-200": !canScrollPrev,
+          "bg-orange-400": canScrollPrev,
         })}
+        style={{
+          transition: "background-color 0.3s ease",
+        }}
       >
         Prev
       </button>
@@ -35,9 +38,12 @@ export default function CarouselControls({
         disabled={!canScrollNext}
         className={classNames({
           "px-4 py-2 text-white rounded-md": true,
-          "bg-indigo-200": !canScrollNext,
-          "bg-indigo-400": canScrollNext,
+          "bg-orange-200": !canScrollNext,
+          "bg-orange-400": canScrollNext,
         })}
+        style={{
+          transition: "background-color 0.3s ease",
+        }}
       >
         Next
       </button>

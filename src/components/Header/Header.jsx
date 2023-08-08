@@ -4,11 +4,11 @@ import MobileNavBar from "./MobileNavBar";
 
 export default function Header() {
   return (
-    <div className="">
-      <div>
+    <div className="flex">
+      <div className="hidden md:block w-full">
         <NavBar />
       </div>
-      <div className="flex md:hidden">
+      <div className="fixed top-0 w-full block md:hidden z-30">
         <MobileNavBar />
       </div>
     </div>
