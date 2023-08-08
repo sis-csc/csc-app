@@ -1,3 +1,10 @@
-export default function MobileMenuButton({ onClick }) {
-  return <button onClick={onClick}>NAv</button>;
+import MenuIcon from "../ui/MenuIcon";
+import MenuCloseIcon from "../ui/MenuCloseIcon";
+
+export default function MobileMenuButton({ showMenu, onClick }) {
+  return (
+    <button onClick={onClick}>
+      {showMenu ? <MenuCloseIcon /> : <MenuIcon />}
+    </button>
+  );
 }

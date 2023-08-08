@@ -16,7 +16,7 @@ export default function AnnasHouse() {
         <EventCard eventName="anna" />
       </div>
       <div className="flex bg-yellow-200 p-1">
-        <LinkButton link="www.google.com" newpage="Google Doc"/>
+        <LinkButton link="www.google.com" newpage="Google Doc" />
       </div>
       <div className="flex bg-blue-200 p-1">
         <GoogleDocPreview />
