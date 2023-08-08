@@ -4,11 +4,11 @@ import ClubDescription from "../../components/Home/ClubDescription";
 
 export default function AboutPage() {
   return (
-    <section className="h-[3000px] flex flex-col px-10 xl:px-5">
-      {/* <PageTitle title="About Us" />
+    <section className="flex flex-col px-10 xl:px-5 h-full">
+      <PageTitle title="About Us" />
       <div className="my-5 flex justify-center">
         <ClubDescription />
-      </div> */}
+      </div>
     </section>
   );
 }
