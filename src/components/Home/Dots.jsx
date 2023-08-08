@@ -9,7 +9,7 @@ const Dots = ({ itemsLength, selectedIndex }) => {
         return (
           <div
             className={classNames({
-              "h-2 w-2 rounded-full transition-all duration-300 bg-indigo-400": true,
+              "h-2 w-2 rounded-full transition-all duration-300 bg-orange-400": true,
               // tune down the opacity if slide is not selected
               "opacity-50": !selected,
             })}
