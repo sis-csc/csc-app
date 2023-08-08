@@ -8,7 +8,7 @@ export default function Header() {
       <div className="hidden md:block w-full">
         <NavBar />
       </div>
-      <div className="fixed top-0 w-full block md:hidden z-20">
+      <div className="fixed top-0 w-full block md:hidden z-30">
         <MobileNavBar />
       </div>
     </div>

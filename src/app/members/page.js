@@ -12,6 +12,8 @@ export const revalidate = twoWeeks;
 export default async function MembersPage() {
   const members = await getAllMembers();
 
+  console.log(members);
+
   return (
     <section className="flex flex-col px-10 xl:px-5 h-full">
       <PageTitle title="Members" />

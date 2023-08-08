@@ -27,7 +27,7 @@ export default function MembersGridItem({ photo, name, role, email }) {
         <MemberEmail email={email} />
       </div>
 
-      <div className="absolute top-0 flex w-full h-[85%] z-10">
+      <div className="absolute top-0 flex w-full h-[85%]">
         <Image
           className="object-cover"
           src={photo}
@@ -41,7 +41,7 @@ export default function MembersGridItem({ photo, name, role, email }) {
         className="absolute bottom-0 w-[150%] h-3/4 -rotate-[35deg] 
         translate-y-[92px] md:translate-y-[90px] translate-x-2
        bg-gradient-to-r from-orange-400/90 via-orange-300/70 to-orange-300
-       z-20 backdrop-blur-md"
+       backdrop-blur-md"
       ></div>
     </div>
   );
