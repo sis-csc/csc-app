@@ -16,8 +16,6 @@ export default function HomeCarousel() {
       </div>
     );
 
-  console.log(images);
-
   return (
     <div className="absolute flex w-screen justify-center">
       <Carousel loop>

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ClubLogoText from "./ClubLogoText";
 import MobileMenuButton from "./MobileMenuButton";
+import MobileMenu from "./MobileMenu";
 
 export default function MobileNavBar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -11,12 +12,26 @@ export default function MobileNavBar() {
     setShowMenu(!showMenu);
   };
 
+  useEffect(() => {
+    setShowMenu(false);
+  }, []);
+
   return (
-    <div className="w-full flex items-center justify-between mx-auto py-6 px-3">
-      <ClubLogoText size="small" />
-      <div>
-        <MobileMenuButton onClick={handleOnClick} />
+    <div
+      className="w-full flex items-center justify-center 
+    mx-auto py-3 px-3 bg-gray-100"
+    >
+      <div className="absolute left-0 pl-4 z-50">
+        <MobileMenuButton showMenu={showMenu} onClick={handleOnClick} />
       </div>
+
+      <ClubLogoText size="small" />
+
+      {showMenu && (
+        <div className="absolute top-0 w-full h-[350px] z-20">
+          <MobileMenu showMenu={showMenu} onClick={handleOnClick} />
+        </div>
+      )}
     </div>
   );
 }
