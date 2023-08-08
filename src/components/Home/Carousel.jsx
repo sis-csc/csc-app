@@ -30,7 +30,7 @@ export default function Carousel({ children, ...options }) {
   const canScrollPrev = !!emblaApi?.canScrollPrev();
 
   return (
-    <div className="w-full flex flex-col items-center ">
+    <div className="w-full  flex flex-col items-center ">
       <div className="w-full overflow-hidden" ref={emblaRef}>
         {/* 3. The inner div must have a display:flex property */}
         {/* 4. We pass the children as-is so that the outside component can style it accordingly */}

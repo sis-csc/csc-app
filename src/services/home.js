@@ -1,7 +1,13 @@
 import { client, urlFor } from "./sanity";
 
 export async function getCarouselImages() {
-  return client.fetch(`*[_type == "home"].carouselImages`);
+  return client
+    .fetch(`*[_type == "home"][0].carouselImages`)
+    .then((carousels) =>
+      carousels.map((carousel) => ({
+        photo: urlFor(carousel),
+      }))
+    );
 }
 
 export async function getRegisterLink() {
@@ -13,15 +19,16 @@ export async function getClubDescription() {
 }
 
 export async function getAchievements() {
-  return client.fetch(`*[_type == "home"][0].achievements`);
-}
+  return client
+    .fetch(`*[_type == "home"][0].achievements`)
+    .then((achievements) =>
+      achievements.map((achievement) => ({
+        ...achievement,
 
-// .then((achievements) => {
-//   achievements.map((item, index) => ({
-//     ...item,
-//     image: urlFor(item.image),
-//   }));
-// })
+        photo: urlFor(achievement.image),
+      }))
+    );
+}
 
 // [
 //   {
