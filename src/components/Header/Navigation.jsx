@@ -9,7 +9,7 @@ export default function Navigation({ mode = "desktop" }) {
         mode === "mobile" && "flex-col"
       } justify-center items-center gap-6 md:gap-9 p-4`}
     >
-      {menu.map((item, index) => (
+      {menu.map((item) => (
         <li key={item.href}>
           {item.name === "Events" ? (
             <div className="flex flex-col top-0">
