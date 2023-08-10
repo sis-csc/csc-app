@@ -15,7 +15,7 @@ export default async function MembersPage() {
   return (
     <section className="flex flex-col px-10 xl:px-5 h-full">
       <PageTitle title="Members" />
-      <div className={`${archivo.className} h-full flex justify-center`}>
+      <div className={`h-full flex justify-center`}>
         <MembersGrid members={members} />
       </div>
     </section>

@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div
       className="flex flex-col md:flex-row md:justify-between 
-      items-center p-6 bg-black text-white"
+      items-center p-7 bg-black text-white"
     >
       <FooterLeft />
       <FooterRight />

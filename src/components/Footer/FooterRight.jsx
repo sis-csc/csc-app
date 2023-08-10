@@ -9,6 +9,9 @@ export default function FooterRight() {
   const navigateToInstagram = () => {
     window.open("https://www.instagram.com/sis_csc/", "_blank");
   };
+  const navigateToSchoolWebsite = () => {
+    window.open("https://www.siskorea.org/", "_blank");
+  };
 
   return (
     <div className="mt-4 md:mt-0 py-3 md:py-0 flex flex-col items-center">
@@ -17,16 +20,18 @@ export default function FooterRight() {
           <FaInstagramSquare size={40} color="#e05a00" />
         </button>
         <div className="ml-4">
-          <Image
-            src="/school.png"
-            className="object-cover  cursor-pointer"
-            alt="school logo"
-            width={60}
-            height={60}
-          />
+          <button onClick={navigateToSchoolWebsite} className="cursor-pointer">
+            <Image
+              src="/school.png"
+              className="object-cover  cursor-pointer"
+              alt="school logo"
+              width={60}
+              height={60}
+            />
+          </button>
         </div>
         <div className="ml-2">
-          <a href="https://www.siskorea.org/#">
+          <button onClick={navigateToSchoolWebsite} className="cursor-pointer">
             <Image
               src="/siskorea.webp"
               className="object-cover  cursor-pointer"
@@ -34,7 +39,7 @@ export default function FooterRight() {
               width={90}
               height={90}
             />
-          </a>
+          </button>
         </div>
       </div>
       <div className="flex md:hidden mt-4">

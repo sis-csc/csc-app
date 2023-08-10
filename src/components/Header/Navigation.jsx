@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { menu, subEvents } from "../../utils/navigationMenu";
 
 export default function Navigation({ mode = "desktop" }) {
+  const [showSubEvents, setShowSubEvents] = useState(false);
+
+  const baseTextStyle = "text-sm lg:text-base text-black hover:text-slate-500";
+
   return (
     <ul
       className={`flex ${
@@ -12,27 +18,25 @@ export default function Navigation({ mode = "desktop" }) {
       {menu.map((item) => (
         <li key={item.href}>
           {item.name === "Events" ? (
-            <div className="flex flex-col top-0">
+            <div className="top-0 flex flex-col">
               <button
-                className="peer text-lg lg:text-xl 
-                text-black"
+                className={`peer text-sm lg:text-base 
+                 ${showSubEvents ? "text-slate-500" : "text-black"}`}
+                onClick={() => setShowSubEvents(!showSubEvents)}
               >
                 Events
               </button>
 
               <ul
-                className="fixed mt-8 hidden peer-hover:flex hover:flex
-               flex-col bg-white drop-shadow-lg p-2"
+                className={`fixed mt-8 ${
+                  showSubEvents ? "flex" : "hidden"
+                } peer-hover:flex
+               flex-col bg-white drop-shadow-lg p-3`}
               >
                 {subEvents.map((item, index) => (
                   <li key={index}>
                     <Link href={item.href}>
-                      <p
-                        className="text-md lg:text-lg 
-                text-black hover:text-slate-500"
-                      >
-                        {item.name}
-                      </p>
+                      <p className={baseTextStyle}>{item.name}</p>
                     </Link>
                   </li>
                 ))}
@@ -40,12 +44,7 @@ export default function Navigation({ mode = "desktop" }) {
             </div>
           ) : (
             <Link href={item.href}>
-              <button
-                className="text-lg lg:text-xl 
-                  text-black hover:text-slate-500"
-              >
-                {item.name}
-              </button>
+              <button className={baseTextStyle}>{item.name}</button>
             </Link>
           )}
         </li>
