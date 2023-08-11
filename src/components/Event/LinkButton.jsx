@@ -1,21 +1,9 @@
-"use client";
-
 import React from "react";
-import useSWR from "swr";
-import LoadingSpinner from "../shared/LoadingSpinner";
 
 export default function LinkButton({ eventName }) {
-  const { data: event, isLoading, error } = useSWR(`/api/event/${eventName}`);
-
-  if (isLoading)
-    return (
-      <div>
-        <LoadingSpinner />
-      </div>
-    );
-
-  console.log(event)
-
+  const baseStyle =
+    "bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded";
+  
   const handleClickButton = () => {
       window.open(event[0].link.addLink, "_blank");
     };

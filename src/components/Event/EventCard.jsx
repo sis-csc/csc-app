@@ -1,7 +1,8 @@
 "use client";
+
+// CSR: client-side rendering [keep updating]
+
 import Image from "next/image";
-// photo
-// desc
 import React from "react";
 import useSWR from "swr";
 import LoadingSpinner from "../shared/LoadingSpinner";
@@ -11,13 +12,13 @@ export default function EventCard({ eventName }) {
 
   if (isLoading)
     return (
-      <div>
+      <div className="flex">
         <LoadingSpinner />
       </div>
     );
 
   return (
-    <div className="flex w-full items-center bg-black pb-2">
+    <div className="mt-2 flex overflow-hidden w-full items-center bg-black pb-2 rounded-lg">
       <div className="flex min-w-[50%]">
         <Image
           src={event[0].image}

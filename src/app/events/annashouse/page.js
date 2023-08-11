@@ -15,16 +15,13 @@ export const metadata = {
 
 export default function AnnasHouse() {
   return (
-    <section className="flex flex-col px-10 xl:px-5 h-full">
+    <section className="flex flex-col px-10 xl:px-5 h-full mb-5">
       <PageTitle title="Anna's House" />
-      <div className="flex justify-center p-3">
+      <div className="flex justify-center py-3">
         <EventCard eventName="anna" />
       </div>
       <div className="flex bg-yellow-200 p-1">
         <LinkButton eventName='anna' />
-      </div>
-      <div className="flex bg-blue-200 p-1">
-        <GoogleDocPreview />
       </div>
     </section>
   );

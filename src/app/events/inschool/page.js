@@ -13,9 +13,9 @@ export const metadata = {
 
 export default function Inschool() {
   return (
-    <section className="flex flex-col px-10 xl:px-5 h-full">
+    <section className="flex flex-col px-10 xl:px-5 h-full mb-5">
       <PageTitle title="In-School Activities" />
-      <div className="flex justify-center p-3">
+      <div className="flex justify-center py-3">
         <EventCard eventName="inschool" />
       </div>
       <div className="flex flex-col items-center bg-gray-200 p-4">
@@ -28,7 +28,6 @@ export default function Inschool() {
           </div>
         </div>
       </div>
-      
     </section>
   );
 }
