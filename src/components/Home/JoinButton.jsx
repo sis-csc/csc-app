@@ -20,7 +20,7 @@ export default function JoinButton() {
   return ( 
     link===undefined ? <></> : 
     <button 
-      className="bg-green-200 text-black text-2xl py-4 px-4 rounded"
+      className="bg-orange-200 text-black text-2xl py-4 px-4 rounded"
       onClick={toRegisterLink}
     >
       Click here to join our club!

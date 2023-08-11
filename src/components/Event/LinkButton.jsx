@@ -1,12 +1,28 @@
 "use client";
 
 import React from "react";
+import useSWR from "swr";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
-export default function LinkButton({ link, newpage }) {
+export default function LinkButton({ eventName }) {
+  const { data: event, isLoading, error } = useSWR(`/api/event/${eventName}`);
+
+  if (isLoading)
+    return (
+      <div>
+        <LoadingSpinner />
+      </div>
+    );
+
+  console.log(event)
+
   const handleClickButton = () => {
-    const formattedLink = link.includes("://") ? link : `https://${link}`;
-    window.open(formattedLink, "_blank");
-  };
+      window.open(event[0].link.addLink, "_blank");
+    };
 
-  return <button onClick={handleClickButton}>{`Link to ${newpage}`}</button>;
+  return (
+    <button onClick={handleClickButton}>
+      {event[0].link===undefined ? "No Title" : event[0].link.title}
+    </button>
+  );
 }

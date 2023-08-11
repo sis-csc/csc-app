@@ -18,7 +18,7 @@ export default function EventCard({ eventName }) {
 
   return (
     <div className="flex w-full items-center bg-black pb-2">
-      <div className="flex max-w-[50%]">
+      <div className="flex min-w-[50%]">
         <Image
           src={event[0].image}
           width={800}
@@ -27,7 +27,7 @@ export default function EventCard({ eventName }) {
         />
       </div>
 
-      <div className="px-5 overflow-auto">
+      <div className="px-5 overflow-auto min-w-[50%]">
         <p className="text-white text-lg md:text-xl">{event[0].description}</p>
       </div>
     </div>

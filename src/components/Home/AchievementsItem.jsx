@@ -6,9 +6,8 @@ export default function AchievementsItem({ title, photo, description }) {
   // styling 필요
   // image undefined error 수정 필요
   return (
-    <div className="flex flex-col justify-center">
-      <p>{title}</p>
-      <div className="flex">
+    <div className="flex w-full items-center pb-2 bg-yellow-200">
+      <div className="flex bg-blue-500 min-w-[50%]">
         <Image
           className="object-cover"
           src={photo}
@@ -17,7 +16,10 @@ export default function AchievementsItem({ title, photo, description }) {
           alt={`${title} image`}
         />
       </div>
-      <p className="text-black">{description}</p>
+      <div className="flex-grow text-center px-5 overflow-auto min-w-[50%]">
+        <p className="text-2xl mt-4 mb-3">{title}</p>
+        <p className="text-gray-600 md:text-xl">{description}</p>
+      </div>      
     </div>
   );
 }

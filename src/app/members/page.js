@@ -7,6 +7,14 @@ import { archivo } from "../../utils/fonts/fonts";
 import { getAllMembers } from "../../services/member";
 import { twoWeeks } from "@/utils/revalidateConstants";
 
+export const metadata = {
+  title: {
+    default: "Members",
+    template: "SIS Community Service Club | %s", // maybe shorten to SIS CSC?
+  },
+  description: "Members of SIS CSC with Names, Roles, and Emails",
+};
+
 export const revalidate = twoWeeks;
 
 export default async function MembersPage() {
