@@ -28,5 +28,22 @@ export default {
       name: 'description',
       type: 'text',
     },
+    {
+      title: 'Link',
+      name: 'link',
+      type: 'document',
+      fields: [
+        {
+          title: 'Title',
+          name: 'title',
+          type: 'string',
+        },
+        {
+          title: 'Add Link',
+          name: 'addLink',
+          type: 'url',
+        },
+      ],
+    },
   ],
 }

@@ -8,6 +8,11 @@ import React from "react";
 // LinkButton
 // GoogleDocPreview
 
+export const metadata = {
+  title: "Anna's House",
+  description: "Anna's House Description and Application Link for SIS CSC",
+};
+
 export default function AnnasHouse() {
   return (
     <section className="flex flex-col px-10 xl:px-5 h-full mb-5">
@@ -15,8 +20,8 @@ export default function AnnasHouse() {
       <div className="flex justify-center py-3">
         <EventCard eventName="anna" />
       </div>
-      <div className="flex justify-center bg-yellow-200 p-1">
-        <LinkButton link="www.google.com" newpage="Google Doc" />
+      <div className="flex bg-yellow-200 p-1">
+        <LinkButton eventName='anna' />
       </div>
     </section>
   );

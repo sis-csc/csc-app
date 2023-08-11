@@ -5,8 +5,11 @@ import PageTitle from "../../components/shared/PageTitle";
 import EventCalendar from "../../components/Schedule/EventCalendar";
 
 export const metadata = {
-  title: "Schedule",
-  description: "",
+  title: {
+    default: "Schedule",
+    template: "SIS Community Service Club | %s", // maybe shorten to SIS CSC?
+  },
+  description: "Schedule with Upcoming Events of SIS CSC",
 };
 
 export default function SchedulePage() {

@@ -1,15 +1,16 @@
-"use client";
-
 import React from "react";
 
-export default function LinkButton({ link, newpage }) {
+export default function LinkButton({ eventName }) {
   const baseStyle =
     "bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded";
-
+  
   const handleClickButton = () => {
-    const formattedLink = link.includes("://") ? link : `https://${link}`;
-    window.open(formattedLink, "_blank");
-  };
+      window.open(event[0].link.addLink, "_blank");
+    };
 
-  return <button onClick={handleClickButton}>{`Link to ${newpage}`}</button>;
+  return (
+    <button onClick={handleClickButton}>
+      {event[0].link===undefined ? "No Title" : event[0].link.title}
+    </button>
+  );
 }
