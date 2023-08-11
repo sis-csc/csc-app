@@ -19,7 +19,7 @@ export default function EventCard({ eventName }) {
 
   return (
     <div className="mt-2 flex overflow-hidden w-full items-center bg-black pb-2 rounded-lg">
-      <div className="flex min-w-[50%]">
+      <div className="flex basis-1/2 h-full">
         <Image
           src={event[0].image}
           width={800}
@@ -28,8 +28,16 @@ export default function EventCard({ eventName }) {
         />
       </div>
 
-      <div className="px-5 overflow-auto min-w-[50%]">
-        <p className="text-white text-lg md:text-xl">{event[0].description}</p>
+      <div
+        className="px-5 py-5 overflow-auto basis-1/2 h-full 
+      flex items-center justify-center"
+      >
+        <p className="translate-x-4 sm:translate-x-0 text-white text-sm md:text-xl">
+          sdaifjoiasjdfsdafsadfadsfasdsd aifjoiasjdfsdafsadfadsfas dsdaifjo iasj
+          dfsdafs adfadsfasdsda ifjoiasj dfsdaf sadfadsf asdsdaifj
+          oiasjdfsdafsad fadsfas dsdaifj oias jdfs dafsad fadsfas dsdai
+          fjoiasjdfsda fsadfadsfasdsdai fjoiasjdfsdafsadfadsfasd
+        </p>
       </div>
     </div>
   );

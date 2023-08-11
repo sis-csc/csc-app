@@ -1,22 +1,6 @@
-"use client";
-import useSWR from "swr";
-import LoadingSpinner from "../shared/LoadingSpinner";
 import AchievementsItem from "./AchievementsItem";
 
-export default function Achievements() {
-  const {
-    data: achievements,
-    isLoading,
-    error,
-  } = useSWR("/api/home/achievements");
-
-  if (isLoading)
-    return (
-      <div>
-        <LoadingSpinner />
-      </div>
-    );
-
+export default function Achievements({ achievements }) {
   return (
     <div className="bg-gray-100 p-4 w-screen mx-auto ">
       <h1 className="text-black text-2xl font-bold mb-3">Achievements</h1>

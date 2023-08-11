@@ -1,4 +1,4 @@
-// CSR
+// CSR: Client Side Rendering
 
 import React from "react";
 import PageTitle from "../../components/shared/PageTitle";

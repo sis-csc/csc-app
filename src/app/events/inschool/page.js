@@ -3,30 +3,26 @@ import LinkButton from "../../../components/Event/LinkButton";
 import PageTitle from "../../../components/shared/PageTitle";
 import React from "react";
 
+// CSR: Client Side Rendering
+
 export const metadata = {
-  title: {
-    default: "In School Activities",
-    template: "SIS Community Service Club | %s", // maybe shorten to SIS CSC?
-  },
-  description: "In School Activities Description and Application Link for SIS CSC",
+  title: "In School Activities",
+  description:
+    "In School Activities Description and Application Link for SIS CSC",
 };
 
 export default function Inschool() {
   return (
-    <section className="flex flex-col px-10 xl:px-5 h-full mb-5">
-      <PageTitle title="In-School Activities" />
+    <section className="flex flex-col items-center px-10 xl:px-5 h-full mb-5">
+      <div className="flex w-full justfiy-start">
+        <PageTitle title="In-School Activities" />
+      </div>
+
       <div className="flex justify-center py-3">
         <EventCard eventName="inschool" />
       </div>
-      <div className="flex flex-col items-center bg-gray-200 p-4">
-        <div className="mb-4 text-center">
-          Helping Faculty - Request & Application Forms
-        </div>
-        <div className="flex justify-center">
-          <div className="flex justify-center w-60 h-20 bg-yellow-300 m-1">
-            <LinkButton eventName="inschool" />
-          </div>
-        </div>
+      <div className="w-60 h-20 flex justify-center bg-yellow-300 m-1">
+        <LinkButton eventName="inschool" />
       </div>
     </section>
   );

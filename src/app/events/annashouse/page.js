@@ -1,12 +1,12 @@
+// CSR: Client Side Rendering
+
 import EventCard from "../../../components/Event/EventCard";
-import GoogleDocPreview from "../../../components/Event/GoogleDocPreview";
 import LinkButton from "../../../components/Event/LinkButton";
 import PageTitle from "../../../components/shared/PageTitle";
 import React from "react";
 
 // EventCard
 // LinkButton
-// GoogleDocPreview
 
 export const metadata = {
   title: "Anna's House",
@@ -20,8 +20,8 @@ export default function AnnasHouse() {
       <div className="flex justify-center py-3">
         <EventCard eventName="anna" />
       </div>
-      <div className="flex bg-yellow-200 p-1">
-        <LinkButton eventName='anna' />
+      <div className="flex justify-center items-center p-1">
+        <LinkButton eventName="anna" />
       </div>
     </section>
   );

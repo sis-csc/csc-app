@@ -3,15 +3,11 @@
 import MembersGrid from "../../components/Members/MembersGrid";
 import React from "react";
 import PageTitle from "../../components/shared/PageTitle";
-import { archivo } from "../../utils/fonts/fonts";
 import { getAllMembers } from "../../services/member";
 import { twoWeeks } from "@/utils/revalidateConstants";
 
 export const metadata = {
-  title: {
-    default: "Members",
-    template: "SIS Community Service Club | %s", // maybe shorten to SIS CSC?
-  },
+  title: "Members",
   description: "Members of SIS CSC with Names, Roles, and Emails",
 };
 

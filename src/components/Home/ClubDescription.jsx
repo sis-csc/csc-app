@@ -1,21 +1,4 @@
-"use client";
-import useSWR from "swr";
-import LoadingSpinner from "../shared/LoadingSpinner";
-
-export default function ClubDescription() {
-  const {
-    data: description,
-    isLoading,
-    error,
-  } = useSWR("/api/home/club-description");
-
-  if (isLoading)
-    return (
-      <div>
-        <LoadingSpinner />
-      </div>
-    );
-
+export default function ClubDescription({ description }) {
   return (
     <div className="bg-black p-4 w-screen mx-auto">
       <h1 className="text-orange-500 text-xl md:text-2xl font-bold">
