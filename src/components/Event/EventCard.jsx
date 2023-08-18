@@ -33,10 +33,7 @@ export default function EventCard({ eventName }) {
       flex items-center justify-center"
       >
         <p className="translate-x-4 sm:translate-x-0 text-white text-sm md:text-xl">
-          sdaifjoiasjdfsdafsadfadsfasdsd aifjoiasjdfsdafsadfadsfas dsdaifjo iasj
-          dfsdafs adfadsfasdsda ifjoiasj dfsdaf sadfadsf asdsdaifj
-          oiasjdfsdafsad fadsfas dsdaifj oias jdfs dafsad fadsfas dsdai
-          fjoiasjdfsda fsadfadsfasdsdai fjoiasjdfsdafsadfadsfasd
+          {event[0].description}
         </p>
       </div>
     </div>

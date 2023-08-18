@@ -4,6 +4,7 @@ const ROLES = [
   {title: "Anna's House Leader", value: "Anna's House Leader"},
   {title: 'Project Manager', value: 'Project Manager'},
   {title: 'Senior Mentor', value: 'Senior Mentor'},
+  {title: 'Public Relations', value: 'Public Relations'},
 ]
 
 export default {
