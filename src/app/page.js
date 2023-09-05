@@ -1,7 +1,7 @@
 // www.blog.com = www.blog.com/
 // www.blog.com/about
 
-import ClubDescription from "@/components/Home/ClubDescription";
+import ClubDescription from "../components/Home/ClubDescription";
 import HomeCarousel from "../components/Home/HomeCarousel";
 import JoinButton from "../components/Home/JoinButton";
 import Achievements from "../components/Home/Achievements";

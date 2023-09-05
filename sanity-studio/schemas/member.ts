@@ -2,9 +2,9 @@ const ROLES = [
   {title: 'President', value: 'President'},
   {title: 'Vice President', value: 'Vice President'},
   {title: "Anna's House Leader", value: "Anna's House Leader"},
-  {title: 'Project Manager', value: 'Project Manager'},
   {title: 'Senior Mentor', value: 'Senior Mentor'},
   {title: 'Public Relations', value: 'Public Relations'},
+  {title: 'Project Manager', value: 'Project Manager'},
 ]
 
 export default {
