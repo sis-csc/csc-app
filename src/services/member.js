@@ -6,7 +6,7 @@ export async function getAllMembers() {
   // urlFor(member.photo): sanity의 `image`는 이상한 객체를 리턴, 예쁘게 url로 만들어줘야 <Image/>에서 사용가능
   return client
     .fetch(
-      `*[_type == "member"] | order(_createdAt asc){ ..., "id":_id, "createdAt":_createdAt}`
+      `*[_type == "member"] | order(customRoleOrder asc){ ..., "id":_id, "role": role}`
     )
     .then((members) =>
       members.map((member) => ({
