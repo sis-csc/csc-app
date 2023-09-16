@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from "react";
 import MemberEmail from "./MemberEmail";
 
-export default function MembersGridItem({ photo, name, role, email }) {
+export default function MembersGridItem({ photo, name, role, email, priorityRoles }) {
+
   return (
     <div
       className="relative w-full aspect-[4/5] 
-    flex flex-col justify-end overflow-hidden
-    border border-gray-200 rounded-xl shadow-lg
-    "
+      flex flex-col justify-end overflow-hidden
+      border border-gray-200 rounded-xl shadow-lg"
     >
       <div className="flex flex-col px-4 py-2 z-10 ">
         <div className="flex flex-col w-full items-end">

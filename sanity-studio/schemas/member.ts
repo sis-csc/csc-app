@@ -1,10 +1,10 @@
 const ROLES = [
-  {title: 'President', value: 'President'},
-  {title: 'Vice President', value: 'Vice President'},
-  {title: "Anna's House Leader", value: "Anna's House Leader"},
-  {title: 'Senior Mentor', value: 'Senior Mentor'},
-  {title: 'Public Relations', value: 'Public Relations'},
-  {title: 'Project Manager', value: 'Project Manager'},
+  {title: 'President', value: '01 President'},
+  {title: 'Vice President', value: '02 Vice President'},
+  {title: "Anna's House Leader", value: "03 Anna's House Leader"},
+  {title: 'Public Relations', value: '04 Public Relations'},
+  {title: 'Project Manager', value: '05 Project Manager'},
+  {title: 'Senior Mentor', value: '06 Senior Mentor'},
 ]
 
 export default {
@@ -37,4 +37,13 @@ export default {
       },
     },
   ],
+  orderings: [
+    {
+      title: 'Role - Custom Order',
+      name: 'customRoleOrder',
+      by: [
+        {field: 'role', direction: 'asc'}
+      ]
+    }
+  ]
 }
